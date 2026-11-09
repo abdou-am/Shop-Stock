@@ -1,11 +1,11 @@
 public class Product {
     private String name;
-    private String code;
     private double price;
-    public Product(String name , String code , double price){
+    private int stock;
+    public Product(String name   , double price , int stock){
         this.name = name;
-        this.code = code;
         this.price = price;
+        this.stock = stock;
     }
 
     // getters
@@ -13,11 +13,11 @@ public class Product {
     public String getName(){
         return name;
     }
-    public String getCode(){
-        return code;
-    }
     public double getPrice(){
         return price;
+    }
+    public int getStock(){
+        return stock;
     }
 
     // setters
@@ -25,11 +25,19 @@ public class Product {
     public void setName(String name){
         this.name = name;
     }
-    public void setCode(String code){
-        this.code = code;
-    }
-    public void setName(double price){
+
+    public void setPrice(double price){
         this.price = price;
+    }
+    public void setStock(int stock){
+        this.stock = stock;
+    }
+
+    // displaying information
+
+    public void display(){
+        // product : isis  | price : 2500DZD |  quantity : 10
+        System.out.println("Product : "+name+" | price : "+price+"DZD | quantity : "+stock);
     }
 
     
